@@ -1,0 +1,12 @@
+footer  {
+    background-color: rgb(31, 29, 29);
+    color: white;
+  }
+  .center {
+    align-content: center;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .padding {
+    padding-top: 20px;
+  }

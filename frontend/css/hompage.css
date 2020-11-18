@@ -1,0 +1,41 @@
+footer  {
+  background-color: rgb(31, 29, 29);
+  color: white;
+}
+.center {
+  align-content: center;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.padding {
+  padding-top: 20px;
+}
+
+.welcome {
+  font-size: 50px;
+  color: #bc925f;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-weight: bolder;
+}
+
+div.brg::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(224, 179, 111, 0.8),
+      rgba(209, 194, 143, 0.7)
+    ),
+    url(https://coffere.com/wp-content/uploads/2018/02/926fed09885920f7793d766478ee8c2e-1024x679.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
