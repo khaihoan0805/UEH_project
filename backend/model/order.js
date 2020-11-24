@@ -4,8 +4,9 @@ const orderSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: { type: String, require: true },
     phone: { type: String, require: true },
-    table: { type: mongoose.Schema.Types.ObjectId, ref: 'Table' },
-    quantity: { type: Number, default: 1 }
+    table: { type: String, require: true },
+    quantity: { type: Number, default: 1 },
+    comment: { type: String }
 })
 
 module.exports = mongoose.model('Order', orderSchema)

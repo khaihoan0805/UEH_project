@@ -1,3 +1,21 @@
+<template>
+  <div id="app">
+    <Form/>
+  </div>
+</template>
+
+<script>
+import Form from './components/Form'
+
+export default {
+  name: 'App',
+  components: {
+    Form
+  }
+}
+</script>
+
+<style>
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 
 :root {
@@ -192,3 +210,5 @@ footer  {
 .padding {
   padding-top: 20px;
 }
+
+</style>

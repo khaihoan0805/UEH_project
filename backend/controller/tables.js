@@ -6,9 +6,9 @@ module.exports.postTable = async (req, res, next) => {
         const table = new Table({
             _id: new mongoose.Types.ObjectId(),
             name: req.body.name,
-            price: req.body.price
+            description: req.body.description
         })
-        await product.save()
+        await table.save()
         return res.status(200).json({
             message: "create successfully",
             table: table
@@ -24,15 +24,15 @@ module.exports.postTable = async (req, res, next) => {
 
 module.exports.getAll = async (req, res, next) => {
     try {
-        let findingTable = await Table.find({})
-        if (!findingTable) {
+        let findingTables = await Table.find({})
+        if (!findingTables) {
             return res.status(404).json({
                 message: "nothing in database"
             })
         }
         let response = {
-            count: findingTable.length,
-            products: findingTable
+            count: findingTables.length,
+            tables: findingTables
         }
         return res.status(200).json({
             message: "finding all products successfully",
@@ -45,4 +45,21 @@ module.exports.getAll = async (req, res, next) => {
             error: error
         })
     }
+}
+
+module.exports.remove = (req, res, next) => {
+    const id = req.query.productId
+    Table.deleteOne({_id: id}).exec()
+    .then(result => {
+        console.log(result)
+        res.status(200).json({
+            message: "deleted successfully"
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json({
+            message: err
+        })
+    })
 }

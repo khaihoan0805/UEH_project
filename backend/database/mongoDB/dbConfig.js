@@ -1,5 +1,5 @@
 module.exports = {
     host: 'mongodb://localhost:27017/',
-    database:'',
+    database:'coffee',
     timeOut: 'serverSelectionTimeoutMS=5000&connectTimeoutMS=10000'
 }
