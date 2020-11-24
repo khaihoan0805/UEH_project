@@ -8,7 +8,8 @@ module.exports.postOrder = async (req, res, next) => {
             _id: mongoose.Types.ObjectId(),
             name: req.body.name,
             phone: req.body.phone,
-            table: req.body.tableType,
+            email: req.body.email,
+            type: req.body.type,
             quantity: req.body.quantity,
             comment: req.body.comment
         })

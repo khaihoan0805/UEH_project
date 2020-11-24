@@ -1,17 +1,14 @@
 <template>
-  <div id="app">
-    <Form/>
-  </div>
+<body class="container">
+
+  <router-view/>
+    
+</body>
 </template>
 
 <script>
-import Form from './components/Form'
-
 export default {
-  name: 'App',
-  components: {
-    Form
-  }
+  name: "App"
 }
 </script>
 

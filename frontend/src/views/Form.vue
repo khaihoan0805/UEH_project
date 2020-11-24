@@ -64,11 +64,11 @@
           required
         >
           <option disabled selected value>Select location that you want</option>
-          <option value="student">Floor G</option>
-          <option value="job">Floor 1</option>
-          <option value="learner">Floor 2</option>
-          <option value="preferNo">Rooftop</option>
-          <option value="other">Garden</option>
+          <option >Floor G</option>
+          <option >Floor 1</option>
+          <option >Floor 2</option>
+          <option >Rooftop</option>
+          <option >Garden</option>
         </select>
       </div>
 
@@ -91,6 +91,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: "Form",
   data() {
@@ -114,6 +116,9 @@ export default {
         comment: this.comment,
       };
       console.log(order);
+      axios.post('http://localhost:3000/order/postOrder', order)
+      .then(Response => console.log(Response))
+      .catch(err => console.log(err))
     },
   },
 };
